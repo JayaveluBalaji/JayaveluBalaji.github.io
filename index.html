@@ -1,243 +1,124 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="dep/normalize.css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="dep/Font-Awesome/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body lang="en">
-    <section id="main">
-      <header id="title">
-        <h1>John Doe</h1>
-        <span class="subtitle">Plaintiff, defendant &amp; witness</span>
-      </header>
-      <section class="main-block">
-        <h2>
-          <i class="fa fa-suitcase"></i> Experiences
-        </h2>
-        <section class="blocks">
-          <div class="date">
-            <span>2015</span><span>present</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Some Position</h3>
-              <span class="place">Some Workplace</span>
-              <span class="location">(remote)</span>
-            </header>
-            <div>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis est, non sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor</li>
-              </ul>
-              </div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2014</span><span>2015</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Another Position</h3>
-              <span class="place">Some Workplace</span>
-              <span class="location">Some City, Some Country</span>
-            </header>
-            <div>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-              </ul>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Profile -->
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container">
+                    <h4 class="w3-center">Shajahan Ubaid</h4>
+                    <p class="w3-center"><img src="https://scontent.fcok1-1.fna.fbcdn.net/v/t1.0-9/43183284_1316282525178082_6441055178413047808_n.jpg?_nc_cat=108&_nc_ht=scontent.fcok1-1.fna&oh=0c3ff2406925fe760c48bab06abb795f&oe=5C7BAEFE" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                    <hr>
+                    <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> India, Kerala</p>
+                    <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> November 29, 1988</p>
+                </div>
             </div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2013</span><span>2014</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Yet Another Job Position</h3>
-              <span class="place">Some Workplace</span>
-              <span class="location">Some City, Some Country</span>
-            </header>
-            <div>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-              </ul>
-              </div>
-          </div>
-        </section>
-      </section>
-      <section class="main-block">
-        <h2>
-          <i class="fa fa-folder-open"></i> Selected Projects
-        </h2>
-        <section class="blocks">
-          <div class="date">
-            <span>2015</span><span>2016</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Some Project 1</h3>
-              <span class="place">Some workplace</span>
-            </header>
-            <div>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio</li>
-              </ul>
+            <br>
+
+            <!-- Accordion -->
+            <div class="w3-card w3-round">
+                <div class="w3-white">
+                    <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Forum</button>
+                    <div id="Demo1" class="w3-hide w3-container">
+                        <a href="http://nimbuzzmasters.forumotion.com/">NIMBUZZ MASTERS</a>
+                    </div>
+                    <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My blog</button>
+                    <div id="Demo2" class="w3-hide w3-container">
+                        <p><a href="https://tipze.blogspot.com/">MALLU TIPS</a></p>
+                    </div>
+                    <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My team </button>
+                    <div id="Demo3" class="w3-hide w3-container">
+                        <div class="w3-row-padding">
+                            <br>
+                            <div class="w3-half">
+                                <p>aysha</p>
+                            </div>
+                            <div class="w3-half">
+                                <p>Top-coder</p>
+                            </div>
+                            <div class="w3-half">
+                                <p>Ashiyana</p>
+                            </div>
+                            <div class="w3-half"><p>The jocker</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2014</span><span>2015</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Some Project 2</h3>
-              <span class="place">Some workplace</span>
-            </header>
-            <div>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis est, non sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2014</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Some Project 3</h3>
-              <span class="place">Some workplace</span>
-            </header>
-            <div>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </section>
-      <section class="main-block concise">
-        <h2>
-          <i class="fa fa-graduation-cap"></i> Education
-        </h2>
-        <section class="blocks">
-          <div class="date">
-            <span>2009</span><span>2014</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Ph.D. in Forty-Two Discovery</h3>
-              <span class="place">Inexistent University</span>
-              <span class="location">Some City, Some Country</span>
-            </header>
-            <div>Relationship of the number with the answer to life, the universe and everything</div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2005</span><span>2009</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>LL.B. in H&aelig;matophagic Economics</h3>
-              <span class="place">Inexistent University</span>
-              <span class="location">Some City, Some Country</span>
-            </header>
-            <div>President's Scholarship</div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2005</span><span>2009</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>B.S. in Existential Science (Double Major)</h3>
-              <span class="place">Inexistent University</span>
-              <span class="location">Some City, Some Country</span>
-            </header>
-            <div>President's Scholarship</div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Massive Online Fee&ndash;Required Course (selective list)</h3>
-            </header>
-            <div class="concise">
-              <ul>
-                <li>Introduction to something else</li>
-                <li>Introduction to some more useless things</li>
-                <li>Philosophy in practice</li>
-                <li>Recursive research and its impact on recursive research</li>
-                <li>Artificial politics</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </section>
-    </section>
-    <aside id="sidebar">
-      <div class="side-block" id="contact">
-        <h1>
-          Contact Info
-        </h1>
-        <ul>
-          <li><i class="fa fa-globe"></i> johndoe.gtld</li>
-          <li><i class="fa fa-linkedin"></i> linkedin.com/in/john</li>
-          <li><i class="fa fa-envelope"></i> me@johndoe.gtld</li>
-          <li><i class="fa fa-phone"></i> 800.000.0000</li>
-        </ul>
-      </div>
-      <div class="side-block" id="skills">
-        <h1>
-          Skills
-        </h1>
-        <ul>
-          <li>Omnipresence</li>
-          <li>Anonymity</li>
-        </ul>
-        <ul>
-          <li>Ordinarity</li>
-          <li>No name rights</li>
-        </ul>
-      </div>
-      <div class="side-block" id="disclaimer">
-        This r&eacute;sum&eacute; was wholly typeset with HTML/CSS &mdash; see <code>git.io/vVSYL</code>
-      </div>
-    </aside>
-  </body>
+            <br>
+
+
+        </div>
+        <br>
+
+        <!-- Alert Box -->
+
+
+        <!-- End Left Column -->
+    </div>
+
+
+</div>
+
+<!-- End Grid -->
+</div>
+
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+    <h5>Nimbuzzmasters Team</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <p>created by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Aysha</a></p>
+</footer>
+
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else {
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
 </html>
