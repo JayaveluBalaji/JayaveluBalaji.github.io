@@ -1,0 +1,674 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resume</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="050aa6c0-647e-402d-85d8-3ab981c13ee5" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_henri_rousseau_1907.jpg" style="object-position:center 26.349999999999994%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">👔</span></div><h1 class="page-title">Resume</h1></header><div class="page-body"><blockquote id="c2b108d8-ef75-4a8d-ba09-5b562104b3d1" class="">Hi, I am Jay. I am a software Engineer at Credit Karma. I am a Technology Enthusiast. I love talking about Machine Learning, Federated Learning. I love reading books on Management and Technology. </blockquote><h1 id="95bbeb93-509a-4d9a-b912-ff1993e68570" class="">☎️ Contact information</h1><p id="96b7a724-e65f-4381-a706-593039de16d5" class="">📧 Jay.bv@yahoo.com</p><p id="f7bb5443-4345-483a-b0a1-48e737f5f4a4" class="block-color-blue">🔗 LinkedIn </p><figure id="9a22dd7e-6068-41f4-b6a9-5ac7a70a14c7"><a href="https://www.linkedin.com/in/jay-b-30501a138/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://www.linkedin.com/in/jay-b-30501a138/</div></div></a></figure><p id="0053c06a-3f79-46ca-86d3-14f07d0a1f37" class="block-color-red">🔗 <strong>Github  </strong></p><figure id="9ee87b36-81ae-4028-b8ca-fcf178b2f09b"><a href="https://github.com/Jbalaji-IIT" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Jbalaji-IIT - Overview</div><div class="bookmark-description">You can&#x27;t perform that action at this time. You signed in with another tab or window. You signed out in another tab or window. Reload to refresh your session. Reload to refresh your session.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/Jbalaji-IIT</div></div><img src="https://avatars.githubusercontent.com/u/38262630?v=4?s=400" class="bookmark-image"/></a></figure><hr id="a958a86f-a0b2-4705-9ce8-6d1c7bbf9265"/><h1 id="aab2d34e-ef2a-4f4f-8e27-d62ebf251279" class="">🧑‍💻  Work experience</h1><table id="17b4ef30-1338-486e-b33e-a66b4d09f12c" class="simple-table"><thead class="simple-table-header"><tr id="aafeb1e9-6eb1-4703-9cd7-1850dbb596d5"><th id="Kzpv" class="block-color-yellow_background simple-table-header" style="width:388.1875px">TITLE</th><th id="xey\" class="block-color-yellow_background simple-table-header" style="width:252.46250915527344px">COMPANY</th><th id="?b:\" class="block-color-yellow_background simple-table-header" style="width:288px">YEARS</th></tr></thead><tbody><tr id="09df4198-b29b-40b5-8984-a6304b69814e"><td id="Kzpv" class="" style="width:388.1875px">Software Engineer</td><td id="xey\" class="" style="width:252.46250915527344px">Credit Karma (Intuit) </td><td id="?b:\" class="" style="width:288px">July 2022 - Present</td></tr><tr id="97482b8c-e6e5-4f3d-ae23-33a09d2d7792"><td id="Kzpv" class="" style="width:388.1875px">Data Scientist </td><td id="xey\" class="" style="width:252.46250915527344px">DR FIRST INC</td><td id="?b:\" class="" style="width:288px">Dec 2021 - JUNE 2022</td></tr><tr id="1447f215-4a86-40b4-b6b0-720a1d2a0ad7"><td id="Kzpv" class="" style="width:388.1875px">Software Engineer</td><td id="xey\" class="" style="width:252.46250915527344px">Computer Services Inc</td><td id="?b:\" class="" style="width:288px">June 2019 - Dec 2021</td></tr><tr id="ee79043a-c98b-473c-a445-decfa5c097fa"><td id="Kzpv" class="" style="width:388.1875px">Software Engineer COOP</td><td id="xey\" class="" style="width:252.46250915527344px">Walgreens</td><td id="?b:\" class="" style="width:288px">June 2018 - Mar 2019</td></tr></tbody></table><p id="c2740476-69cf-4732-b91b-9b1c4f35a684" class="">
+</p><p id="22b53136-7168-4fd1-bbd0-29d92c55d21a" class=""><mark class="highlight-red"><strong>Work Experience in India </strong></mark></p><table id="46459ac5-eca7-4c54-be58-4a3caea1c3e4" class="simple-table"><thead class="simple-table-header"><tr id="3c0082c4-499d-4b0e-9c79-b317923dba2d"><th id="f;cA" class="block-color-teal_background simple-table-header" style="width:262.1125183105469px">TITLE </th><th id="Opo_" class="block-color-teal_background simple-table-header" style="width:386.2875061035156px">COMPANY </th><th id="LGQv" class="block-color-teal_background simple-table-header" style="width:290px">YEARS</th></tr></thead><tbody><tr id="91783641-a567-4e46-a106-6f6cdccb85e4"><td id="f;cA" class="" style="width:262.1125183105469px">Software Engineer</td><td id="Opo_" class="" style="width:386.2875061035156px">TATA CONSULTANCY SERVICES</td><td id="LGQv" class="" style="width:290px">2014-2015</td></tr><tr id="1f4c3b4e-7454-4438-a4ac-6cbb6414cc6a"><td id="f;cA" class="" style="width:262.1125183105469px">Software Engineer</td><td id="Opo_" class="" style="width:386.2875061035156px">FSS </td><td id="LGQv" class="" style="width:290px">2011 -2014</td></tr></tbody></table><p id="fb2f3fb6-5ac5-4ec2-b0e7-fb38ed942e38" class="">
+</p><h1 id="64daa80c-6aeb-48dd-8e17-80df3641a2fb" class="">🛠 Skills</h1><h2 id="391a9f65-483b-461e-99ac-d9827d18fcfa" class="">💻 Technology</h2><div id="6fbb435c-0f44-4cee-ab6d-7d2357caaa5e" class="column-list"><div id="18eaacae-9269-4ea5-a8da-ceccc23b76ac" style="width:50%" class="column"><table id="976f6e3a-a576-4ad3-ac53-5b5431ee35c3" class="simple-table"><tbody><tr id="40826d7a-737b-4c34-9e38-4b858a474376"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">Python </th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="13d07a58-0638-46a6-b633-d2f07a222303"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">Java</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="9783ccda-2666-420c-9285-eab120348399"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">Scala</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="433f2911-dd8d-4334-93c2-a9c936580b3c"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">C++</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="791de461-84f5-41da-9713-51e5db4a66d8"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">TypeScript </th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="fb27fa69-47c4-4b03-8e4a-2811ea99d964"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">Javascript</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="e77df726-0171-4802-8802-0c1a9c729aad"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">Machine Learning</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="b3119658-eaaf-4e4a-b6c1-f1ac06be11cd"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">Deep Learning</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="2b7ef199-3538-4f47-98e1-6b6a2c61a0a7"><th id="w@\P" class="block-color-teal_background simple-table-header" style="width:176px">NODE JS</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr></tbody></table><p id="d8ea5d5d-807d-45bb-8856-c9a52c4898f6" class="">
+</p></div><div id="e4dd5cf3-5b84-4c09-b311-859a41c4d26f" style="width:50%" class="column"><table id="3adb7114-36ea-4610-80f9-38903c33780d" class="simple-table"><tbody><tr id="cddac21d-1337-45ba-9855-361084aafa28"><th id="w@\P" class="block-color-purple_background simple-table-header" style="width:194px">Docker</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="d381c102-f68e-495d-8a3f-f0857db68d2c"><th id="w@\P" class="block-color-purple_background simple-table-header" style="width:194px">Kubernetes</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="79cdd55c-b347-4f75-a281-6782e4108cea"><th id="w@\P" class="block-color-purple_background simple-table-header" style="width:194px">Helm Charts</th><td id="Nk:w" class="block-color-default" style="width:140px">⭐️⭐️⭐️⭐️⭐️</td></tr></tbody></table><table id="29968ebb-d709-42a6-808d-1ef35a1c09cc" class="simple-table"><tbody><tr id="9194c864-1d47-40ff-9675-9f49848ef2be"><td id="@&lt;D]" class="block-color-orange_background" style="width:192px">Scala Finagle </td><td id="@}sL" class="" style="width:153px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="277bf498-7138-4fe7-bd69-c66fb86bf98a"><td id="@&lt;D]" class="block-color-orange_background" style="width:192px">Scala Akka</td><td id="@}sL" class="" style="width:153px">⭐️⭐️⭐️⭐️⭐️</td></tr><tr id="ae35e0e6-1722-4f6c-a18a-07e4b0a8d633"><td id="@&lt;D]" class="block-color-orange_background" style="width:192px">Scala Play</td><td id="@}sL" class="" style="width:153px">⭐️⭐️⭐️⭐️⭐️</td></tr></tbody></table><table id="2ac4fd9c-f55f-43b5-9c74-d0647a65b7af" class="simple-table"><thead class="simple-table-header"><tr id="524f9f7d-db6b-450b-809b-529c456560b1"><th id="jL{I" class="block-color-red_background simple-table-header" style="width:381.4499969482422px"><mark class="highlight-pink_background">Flask, Django,  FAST API, Tensor Flow, Pytorch, </mark>SPACY</th></tr></thead><tbody><tr id="6004e6ba-a078-426d-9437-3fe54ba1e931"><th id="jL{I" class="simple-table-header-color simple-table-header" style="width:381.4499969482422px">Spring Hibernate</th></tr></tbody></table><p id="f60ef0e3-e67e-486d-966a-e0b6c5c9acb6" class="">
+</p></div></div><hr id="ec8179cc-396c-4f77-8504-fea6e223b362"/><h2 id="6f4c8e3b-05a6-46f0-93d5-f4a5c88359ac" class="">🗣 Languages</h2><p id="a541309f-71d1-4997-bced-435d312566f6" class=""> <strong>English </strong></p><p id="286f9bf6-a1b1-45c1-af82-d5b5aa97a68a" class=""><strong> Telugu </strong></p><p id="381c44e7-20fb-4768-8a70-bb9846f1e738" class=""><strong> Tamil</strong></p><p id="5d2d690c-b5a5-4101-bdbb-c099000340f0" class=""> </p><h3 id="e716a4e4-05ff-41fd-bea2-5880e6f62de9" class="">📜 ACHIEVEMENTS</h3><ul id="0cb71a70-3511-4283-b81d-3a5727a777e0" class="bulleted-list"><li style="list-style-type:disc"><a href="https://dev.to/anabella/dancing-with-oauth-emp"> </a>Invented Mobile Phone Text operated Irrigation Water Pump </li></ul><ul id="919fbb6c-6e0a-413f-aa2f-dda57ca668a0" class="bulleted-list"><li style="list-style-type:disc">Dynamic Rule Based Engine</li></ul><hr id="ab8a9789-5b9b-4464-98c4-d529d86d8d18"/><h1 id="5b757373-9ff5-4aab-b4a7-bbe050f631b9" class="">📚 Education</h1><h2 id="959ab8a2-9bed-4d4d-8372-ca2aed040abf" class="">Bachelor in Technology, JNTU ANANTAPUR 2011</h2><h2 id="76186119-dbdd-4b55-aec7-a03a91f25f6d" class="">Masters in Computer Science , IIT CHICAGO  2019</h2><p id="39fcfd92-0b0d-4c2d-b9d7-2d0c2ca928c9" class="">
+</p><p id="d55aedcd-45bb-47d5-a6c4-6df90f36ad30" class="block-color-gray"> </p></div></article></body></html>
